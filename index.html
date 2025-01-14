@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tu Tienda de Tecnología</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header y Navegación */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Productos Destacados */
+        .featured {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .featured h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: var(--light-bg);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TechStore</div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#ofertas">Ofertas</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Tecnología de Última Generación</h1>
+        <p>Descubre nuestra selección de productos tecnológicos de alta calidad a precios increíbles.</p>
+        <a href="#productos" class="btn btn-primary">Ver Productos</a>
+    </section>
+
+    <section class="featured" id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images-cdn.ubuy.co.in/633a87dfd6b53a07f76e0444-ip12-pro-max-unlocked-smartphone-for.jpg" alt="Smartphone">
+                </div>
+                <div class="product-info">
+                    <h3>Smartphone Pro Max</h3>
+                    <p>El último smartphone con características premium</p>
+                    <p class="price">$999</p>
+                    <a href="#" class="btn btn-primary">Comprar Ahora</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08988597.png" alt="Laptop">
+                </div>
+                <div class="product-info">
+                    <h3>Laptop Ultra</h3>
+                    <p>Potente laptop para trabajo y entretenimiento</p>
+                    <p class="price">$1299</p>
+                    <a href="#" class="btn btn-primary">Comprar Ahora</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://zerolifestyle.co/cdn/shop/files/RoseGold_1.webp?v=1725950101&width=2215" alt="Smartwatch">
+                </div>
+                <div class="product-info">
+                    <h3>Smartwatch Elite</h3>
+                    <p>Mantente conectado con estilo</p>
+                    <p class="price">$299</p>
+                    <a href="#" class="btn btn-primary">Comprar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>¿Listo para renovar tu tecnología?</h2>
+            <p>Suscríbete a nuestro newsletter y recibe ofertas exclusivas</p>
+            <a href="#" class="btn btn-primary">Suscribirse</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Tu tienda de confianza para productos tecnológicos de alta calidad.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#soporte">Soporte</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
